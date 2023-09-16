@@ -1,14 +1,22 @@
 def sortArray(nums):
-  for j in range(0, len(nums)-1):
-    iMin = j
-            
-    for i in range(j+1, len(nums)):
-      if(nums[i] < nums[iMin]):
-        iMin =i
-            
-    if(iMin != j):
-      nums[j], nums[iMin] = nums[iMin], nums[j] 
+  
+  for idx in range(len(nums)):
+    minimum  = idx
+
+    for j in range(idx+1, len(nums)):
+      if nums[j] < nums[minimum]:
+        minimum = j
+    
+    if minimum != idx:
+      nums[idx], nums[minimum] = nums[minimum], nums[idx]
+  
   return nums
 
+# tests
 
-print(sortArray([5,3,7,1]))
+print(sortArray([5,4,3,8,4,6,1]))
+print(sortArray([3,2,1]))
+print(sortArray([3,3,3]))
+print(sortArray([1,2,3]))
+
+    
