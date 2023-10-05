@@ -45,7 +45,7 @@ def solution(root):
         
     helper(0, root)
     return maxSum
-
+"""
 Q. Given a binary tree, return the values of the nodes when facing the tree from the right side (from top to bottom).
 
 Example:
@@ -65,7 +65,7 @@ Output: [1, 5, 7]
 root of the tree
 
 [output] array.integer
-
+"""
 
 def solution(root):
 
@@ -83,7 +83,7 @@ def solution(root):
         rightSideNodes.append(curr.value)
         
     return rightSideNodes
-
+"""
 Q. Given a binary tree and a target k, count the number of nodes that has a value less than k.
 
 [execution time limit] 4 seconds (py3)
@@ -97,7 +97,7 @@ root of the tree
 [input] integer target
 
 [output] integer
-
+"""
 def solution(root, target):
 
     from collections import deque
@@ -292,19 +292,19 @@ returns:
 
 def solution(root):
   if root is None: return None
-      new = Tree(root.value)
-      def helper(original, new):
+  new = Tree(root.value)
+  def helper(original, new):
 
-          if original is None: return
-          
-          if original.right:
-              new.left = Tree(original.right.value)
-          if original.left:
-              new.right = Tree(original.left.value)
-          
-          helper(original.left, new.right)
-          helper(original.right, new.left)
-          
-      helper(root, new)
-      return new
+      if original is None: return
+      
+      if original.right:
+          new.left = Tree(original.right.value)
+      if original.left:
+          new.right = Tree(original.left.value)
+      
+      helper(original.left, new.right)
+      helper(original.right, new.left)
+      
+  helper(root, new)
+  return new
 
