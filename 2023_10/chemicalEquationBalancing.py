@@ -145,3 +145,75 @@ print(is_balanced("2H2O2 = 2H2O + O2"))
 print(not is_balanced("NaCl = Na + Cl2"))
 print(is_balanced("C6H12O6 + 6O2 = 6CO2 + 6H2O"))
 print(is_balanced("12H2O = 12H2 + 6O2"))
+
+'''
+formation solution
+
+from typing import Dict
+
+def parse_molecule(molecule: str, counts: Dict[str, int]) -> Dict[str, int]:
+    """
+    Parse a single molecule string and update a dictionary of element counts.
+
+    Args:
+        molecule: A string representing a single molecule.
+        counts: A dictionary representing the current element counts.
+
+    Returns:
+        A dictionary with updated element counts.
+    """
+    coefficient = 1
+    i = 0
+    while i < len(molecule):
+        if molecule[i].isdigit():
+            digit = ""
+            while molecule[i].isdigit():
+                digit += molecule[i]
+                i += 1
+            coefficient = int(digit)
+        else:
+            element = molecule[i]
+            i += 1
+            while i < len(molecule) and molecule[i].islower():
+                element += molecule[i]
+                i += 1
+            count = ''
+            while i < len(molecule) and molecule[i].isdigit():
+                count += molecule[i]
+                i += 1
+            count = int(count) if count else 1
+            count *= coefficient
+            counts[element] = counts.get(element, 0) + count
+    return counts
+
+def parse_side(side: str) -> Dict[str, int]:
+    """
+    Parse a side of a chemical equation and return a dictionary of element counts.
+
+    Args:
+        side: A string representing a side of a chemical equation.
+
+    Returns:
+        A dictionary with element counts for the given side.
+    """
+    molecules = side.replace(" ", "").split('+')
+    counts = {}
+    for molecule in molecules:
+        counts = parse_molecule(molecule, counts)
+    return counts
+
+def is_balanced(s: str) -> bool:
+    """
+    Check if a chemical equation is balanced.
+
+    Args:
+        s: A string representing a chemical equation.
+
+    Returns:
+        True if the equation is balanced, False otherwise.
+    """
+    lhs, rhs = s.split('=')
+    left_counts = parse_side(lhs)
+    right_counts = parse_side(rhs)
+    return left_counts == right_counts
+'''
