@@ -42,18 +42,19 @@ A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> i
 """
 
 
-class Solution:
-    def leastInterval(self, tasks, n: int) -> int:
-        from collections import Counter
-        taskCounts = Counter(tasks).values()
-     
-        M = max(taskCounts)
-        print("M: ",M)
-        MCount = 0
-        for value in taskCounts:
-            if value == M:
-                MCount +=1
-        
-        print("MCOUNT: ",MCount)
-        
-        return max(len(tasks),  (M - 1) * (n + 1) + MCount)
+
+def leastInterval(tasks, n: int) -> int:
+    from collections import Counter
+    taskCounts = Counter(tasks).values()
+    
+    M = max(taskCounts)
+    MCount = 0
+    for value in taskCounts:
+        if value == M:
+            MCount +=1
+    
+    return max(len(tasks),  (M - 1) * (n + 1) + MCount)
+
+print(leastInterval(["A","A","A","B","B","B"], 2), "expect 8")
+print(leastInterval(["A","A","A","B","B","B"], 0), "expect 6")
+print(leastInterval(["A","A","A","A","A","A","B","C","D","E","F","G"], 2), "expect 16")
