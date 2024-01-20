@@ -141,11 +141,11 @@ assert longestPath(root) == 2
 # Test tree with multiple nodes
 root = Node(1, left=Node(2), right=Node(3))
 assert longestPath(root) == 2
-    '''
+'''
     
 
 
-    '''
+'''
 class Node:
   def __init__(self, value, left=None, right=None):
     self.value = value
@@ -176,4 +176,4 @@ def longestPath(root):
 
   return maxLength
   
-    '''
+'''
