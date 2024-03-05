@@ -47,25 +47,25 @@ At most 104 calls in total will be made to reset and shuffle.
 """
 from random import randint
 class Solution:
-    def __init__(self, nums):
-        self.nums  = nums
-        self.original = list(nums)
+  def __init__(self, nums):
+    self.nums  = nums
+    self.original = list(nums)
         
 
-    def reset(self):
-        self.nums = self.original
-        self.original = list(self.original)
-        return self.nums
+  def reset(self):
+    self.nums = self.original
+    self.original = list(self.original)
+    return self.nums
         
 
-    def shuffle(self):
-        
+  def shuffle(self):
+      
 
-        if not self.nums or len(self.nums) == 0:
-            return self.nums
-        n = len(self.nums)
-        for i in range(n-1): 
-            j = randint(i, n-1)
-            self.nums[i], self.nums[j] = self.nums[j], self.nums[i]
+    if not self.nums or len(self.nums) == 0:
+      return self.nums
+    n = len(self.nums)
+    for i in range(n-1): 
+      j = randint(i, n-1)
+      self.nums[i], self.nums[j] = self.nums[j], self.nums[i]
 
-        return self.nums
+    return self.nums
