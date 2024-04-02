@@ -68,38 +68,47 @@ Outline of algorithm #:
 
 🛠️ IMPLEMENT
 '''
+class Account:
+  def __init__(self, initialBalance) -> None:
+    self.balance = initialBalance
+  
+  def deposit(self, amount):
+    self.balance += amount
+    return f'Deposit successful: Your new balance is ${self.balance:.2f}' 
+
+  def withdraw(self, amount):
+    if amount > self.balance:
+      return 'Withdrawal failed: Insufficient funds.'
+    self.balance -= amount
+    return f'Withdrawal successful: Your new balance is ${self.balance:.2f}.'
+
 class ATM:
   def __init__(self):
     self.accounts = {}
-    self.idTracker = 1
 
   def create_account(self, initial_balance=0.0) -> int:
-    accountId = self.idTracker
-    self.accounts[accountId] = initial_balance
-    self.idTracker += 1
+    accountId = len(self.accounts) + 1
+    self.accounts[accountId] = Account(initial_balance)
     return accountId
 
   def get_balance(self, account_id: int):
-    if account_id not in self.accounts:
+    account = self.accounts.get(account_id)
+    if not account:
       return None
-    return self.accounts[account_id]
+    return account.balance
 
   def deposit(self, account_id: int, amount: float) -> str:
-    if account_id not in self.accounts:
+
+    account = self.accounts.get(account_id)
+    if not account:
       return 'Deposit failed: Account not found.'
-    self.accounts[account_id] += amount
-    return 'Deposit successful: Your new balance is $' + '{:.2f}'.format(self.accounts[account_id]) + '.'
-
+    return account.deposit(amount)
+  
   def withdraw(self, account_id: int, amount: float) -> str:
-    if account_id not in self.accounts:
+    account = self.accounts.get(account_id)
+    if not account:
       return 'Withdrawal failed: Account not found.'
-    
-    if amount > self.accounts[account_id]:
-      return 'Withdrawal failed: Insufficient funds.'
-    
-    self.accounts[account_id] -= amount
-    return 'Withdrawal successful: Your new balance is $' + '{:.2f}'.format(self.accounts[account_id]) + '.'
-
+    return account.withdraw(amount)
  
 '''
 🧪 VERIFY
@@ -116,7 +125,7 @@ def test_atm():
   assert atm.create_account(50.0) == 3
 
   # Test depositing and withdrawing money
-  assert atm.deposit(1, 50.0 )== 'Deposit successful: Your new balance is $50.00.'
+  assert atm.deposit(1, 50.0 ), 'Deposit successful: Your new balance is $50.00.'
   assert atm.get_balance(1) == 50.0
   assert atm.withdraw(1, 20.0) == 'Withdrawal successful: Your new balance is $30.00.'
   assert atm.withdraw(1, 40.0) == 'Withdrawal failed: Insufficient funds.'
