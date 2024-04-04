@@ -50,16 +50,17 @@ print(atm.withdraw(account1, 40.0))  # should print "Withdrawal failed: Insuffic
 
 🔎 EXPLORE
 List your assumptions & discoveries:
- 
+assumptions: 
+  we will always have valid amounts for deposit or withdrawal (according to the test cases)
 
 Insightful & revealing test cases:
  
 
 🧠 BRAINSTORM
 What approaches could work?
-Algorithm 1:
-Time: O()
-Space: O()
+Algorithm 1: use a hashmap to store accounts, use the length of the hashmap as ID generetator
+Time: O(1)
+Space: O(n) where N is the number of accounts
  
 
 📆 PLAN
@@ -137,4 +138,4 @@ def test_atm():
   assert atm.withdraw(4, 50.0) == 'Withdrawal failed: Account not found.'
   print('Tests passed.')
 
-print(test_atm())
+test_atm()
