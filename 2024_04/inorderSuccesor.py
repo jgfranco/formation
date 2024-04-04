@@ -10,15 +10,14 @@ class Node:
 
 def inOrderSuccessor(root: Node, target: int, successor = None) :
 
-    s = None
     while root:
         if target >= root.val:
             root = root.right
         else:
-            s = root
+            successor = root
             root = root.left
 
-    return s
+    return successor
 
 
 root = Node(5,
