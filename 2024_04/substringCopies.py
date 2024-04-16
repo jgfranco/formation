@@ -18,15 +18,21 @@ Insightful & revealing test cases:
  
 
 🧠 BRAINSTORM
-What approaches could work?
+What approaches could work? use slice to compare word vs substring 
 Algorithm 1:
-Time: O()
-Space: O()
+Time: O(N) where N is the length of the word. Worst case scenario we would be slicing the word one character at a time
+Space: O(N) where N is the size of the callstack
  
 
 📆 PLAN
 Outline of algorithm #: 
- 
+base case 1: if the word is empty and the counter is 0, return True
+base case 2: if the word is empty return False
+
+slice the word  from the beginning to the size of the subString
+if they are the same: call recursively on the rest of the word, decrement the counter (n)
+otherwise, slice the word by one (remove the first character) and call recursively 
+
 
 🛠️ IMPLEMENT
 function strCopies(word, sub, n) {
