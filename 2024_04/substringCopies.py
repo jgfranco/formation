@@ -20,18 +20,13 @@ Insightful & revealing test cases:
 🧠 BRAINSTORM
 What approaches could work? use slice to compare word vs substring 
 Algorithm 1:
-Time: O(N) where N is the length of the word. Worst case scenario we would be slicing the word one character at a time
-Space: O(N) where N is the size of the callstack
+Time: O() 
+Space: O()
  
 
 📆 PLAN
 Outline of algorithm #: 
-base case 1: if the word is empty and the counter is 0, return True
-base case 2: if the word is empty return False
 
-slice the word  from the beginning to the size of the subString
-if they are the same: call recursively on the rest of the word, decrement the counter (n)
-otherwise, slice the word by one (remove the first character) and call recursively 
 
 
 🛠️ IMPLEMENT
@@ -44,18 +39,16 @@ Run tests. Methodically debug & analyze issues.
 
 '''
 
-def strCopies(word, sub, n):
-  if n == 0 and word == "":
-    return True
-  if word == "":
+def strCopies(word, sub, n, index = 0):
+  if len(word)- index < len(sub):
+    if n == 0:
+      return True
     return False
-  
-  subSize = len(sub)
 
-  if sub == word[:subSize]:
-    return strCopies(word[subSize:], sub, n-1)
+  if word.startswith(sub, index):
+    n -=1
   
-  return strCopies(word[1:], sub, n)
+  return strCopies(word, sub, n, index +1)
 
 
 assert strCopies("catcowcat", "cat", 2) == True
