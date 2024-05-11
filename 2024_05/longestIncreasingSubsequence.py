@@ -55,6 +55,7 @@ def longestIncreasingSubSequenceLength(array):
       return
     elif len(stack) > len(result):
       result = stack.copy()
+ 
 
     
     # not use it
@@ -62,20 +63,12 @@ def longestIncreasingSubSequenceLength(array):
     stack.pop()
     helper(stack, index)
    
-
-
   helper([],0)
 
   return result
 
 
-"""
-             i
-[5, 1, 4, 2, 3]
-          j 
 
-subsequences = [[1,2]]
-"""
 print(longestIncreasingSubSequenceLength([5, 1, 4, 2, 3]), "expect: [1, 2, 3]")
 print(longestIncreasingSubSequenceLength([4, 5, 6, 7, 1, 2, 3]), "expect: [4, 5, 6, 7]")
 print(longestIncreasingSubSequenceLength([1, 2, 3]), "expect: [1, 2, 3]")
