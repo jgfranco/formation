@@ -1,4 +1,4 @@
-/*
+"""
 Given a chess board with a set of bishops, return the number of pairs of bishops that are attacking each other. Bishops will be given as an array of tuples.
  
 
@@ -45,5 +45,26 @@ function pairsOfAttackingBishops(bishops) {
 }
 
 console.log(pairsOfAttackingBishops(bishops))
+"""
 
+
+def pairsOfAttackingBishops(bishops):
+
+  descending = {}
+  ascending = {}
+  count  = 0
+  for x,y in bishops:
+    minus = x - y 
+    plus = x + y
+    descending[minus] = descending.get(minus, -1) + 1
+    ascending[plus] = ascending.get(plus, -1) + 1
+
+    
+    count += ascending[plus] + descending[minus]
+    
+
+  return count
+
+bishops= [(0, 0), (2, 2), (1, 2), (3, 0)]
+print(pairsOfAttackingBishops(bishops))
 
