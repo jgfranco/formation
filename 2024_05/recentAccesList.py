@@ -1,5 +1,4 @@
 """
-'''
 Design a structure to efficiently manage a data set in order of access. The most recently accessed data is always at the end. The data least recently accessed is at the beginning.
 
 This data structure should be implemented as a class. The constructor takes the data in the form of an array and initializes the instance.
@@ -81,7 +80,7 @@ class MRQueue {
 class MRQueue:
   __init__(self, data):
   fetch(ordinal):
-'''
+
 class LLnode:
   def __init__(self):
     pass
@@ -121,10 +120,6 @@ class MRQueue:
 array_1 = [1,2,3,4,5]
 MRqueue_1 = MRQueue(array_1)
 
-
-
-
-'''
 Javascript Land
 
 class MRQueue {
@@ -156,9 +151,4 @@ class MRQueue {
 
   }
 }
-
-
-'''
-
-
 """
