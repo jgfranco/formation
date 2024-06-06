@@ -15,23 +15,23 @@
 
 ## How project managers impact organizations
 
-	- focusing on the customer	
-		-	ask the customer questions 
-		⁃	what is the problem you would like us to help solve?
-		⁃	what prompted you to ask for help now?
-		⁃	What is your hope for the outcome of this project?
-	-	building a great team
-		⁃	this is the project biggest asset
-		⁃	a successful PM takes time to understand each member’s motivations, strengths and weaknesses
-		⁃	allow the team to have input and ask questions, address their needs ASAP so they can feel appreciated 
-	-	fostering relationships and communication 
-		⁃	check in daily with your team, ask how they are doing and how can you be of help for them. 
-		⁃	build relationships, communicate and treat others with consideration and respect
-	- managing the project
-		⁃	the PM sees the overall impact of the team members and their completion of the tasks and communicates it to the team
-	-	breaking down barriers
-		⁃	A PM encourages team members to be innovative and empowers them to share ideas. 
-		⁃	You can advocate for more resources for your team 
+- focusing on the customer	
+	-	ask the customer questions 
+	⁃	what is the problem you would like us to help solve?
+	⁃	what prompted you to ask for help now?
+	⁃	What is your hope for the outcome of this project?
+-	building a great team
+	⁃	this is the project biggest asset
+	⁃	a successful PM takes time to understand each member’s motivations, strengths and weaknesses
+	⁃	allow the team to have input and ask questions, address their needs ASAP so they can feel appreciated 
+-	fostering relationships and communication 
+	⁃	check in daily with your team, ask how they are doing and how can you be of help for them. 
+	⁃	build relationships, communicate and treat others with consideration and respect
+- managing the project
+	⁃	the PM sees the overall impact of the team members and their completion of the tasks and communicates it to the team
+-	breaking down barriers
+	⁃	A PM encourages team members to be innovative and empowers them to share ideas. 
+	⁃	You can advocate for more resources for your team 
 
 ## Roles and responsibilities of  a Project Manager
 
