@@ -6,18 +6,18 @@ Values: What values guide me?
 
 
 strengths: 
-	▪	I like mentoring and distilling complex ideas into simple language
-	▪	I am creative and love problem solving 
+- I like mentoring and distilling complex ideas into simple language
+- I am creative and love problem solving 
 
 Motivations
-	▪	Coming up with a solution 
-	▪	Creating something from scratch
-	▪	Helping others achieve their goals
+- Coming up with a solution 
+- Creating something from scratch
+- Helping others achieve their goals
 
 Values:
-	▪	collaboration 
-	▪	integrity
-	▪	responsibility
+- collaboration 
+- integrity
+- responsibility
 
 
 
