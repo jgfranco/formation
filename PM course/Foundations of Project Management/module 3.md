@@ -72,10 +72,10 @@ Linear: means the previous phase or task has to be completed before the next can
 Iterative: means some of the pahses and tasks will overlap or happen at the same time that other tasks are being worked on. (produce a new tv show)
 
 ## Waterfall
-- originates in the 70s
+- originates in the 70s, from traditional engineering and manufacturing
 - sequential order of phases
 - it has a linear approach
-- Comes from traditional engineering and manufacturing
+
 - use it when tasks are dependent on other tasks
 - use it when you are not expecting to much changes along the project 
 
