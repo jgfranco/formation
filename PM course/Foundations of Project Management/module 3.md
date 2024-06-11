@@ -104,3 +104,33 @@ Steps of LSS (DMAIC)
 - is all about learning from the work you did up front to put new processes and documentation in place
 
 
+## Lean 
+The main principle in Lean methodology is the reduce of waste
+Types of waste:
+- Lack of proper documentation
+- Lack of process standards
+- Not understanding the customers’ needs
+- Lack of effective communication
+- Lack of process control
+- Inefficient process design
+- Failures of management
+
+### Lean 5S
+1. Sort: remove not needed items. Leave only the bare essentials
+2. Set in order: Arrange items so thet are easy to use. Label items that anyone cna find them or put them away.
+3. Shine: Keep eveything in its place. Clean your workspace everyday.
+4. Standardize: Perform the process in the same way every time. 
+5. Sustain: Make a habit of maintaining correct procedures and instill discipline in your team
+
+## Six Sigma
+The seven key principles of Six Sigma are:
+
+1. Always focus on the customer.
+2. Identify and understand how the work gets done.Understand how work really happens.
+3. Make your processes flow smoothly.
+4. Reduce waste and concentrate on value.
+5. Stop defects by removing variation.
+6. Involve and collaborate with your team.
+7. Approach improvement activity in a systematic way. 
+
+In depth [article](https://www.teamwork.com/project-management-guide/project-management-methodologies/) on Project Management Methodologies 
