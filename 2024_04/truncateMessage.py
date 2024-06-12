@@ -31,7 +31,7 @@ def truncateMessage(message, threshold):
   if len(message) <= threshold:
     return message
 
-  words = message.split('')
+  words = message.split(' ')
   truncatedMessage = ""
   for word in words:
     if len(word) + 4 <= threshold:
