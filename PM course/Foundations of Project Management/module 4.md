@@ -25,3 +25,19 @@ A project management office or PMO, is a group within an organization that defin
 3. Common project culture. PMOs help set common prohect culture practices by training employees about optimal approaches and best practices.
 4. Resource management. PMOs help in the allocation and management of resources - such as people and equipment - across all projects throughtout the org based on budget, timelines and priorities. 
 5. Creation of project documentation, archives and tools. PMOs invest in and provide templates, tools and sofotware that help in the project management process. 
+
+## Introduction to organizational culture
+The values employees share, as well as the org's values, mission and history. Can be understood as the company's personality.
+
+### How to determine an organization's culture
+- How does communication happen?
+- How are decisions made?
+- Whay kind of rituals are in place when somebody new comes to the facility?
+- How are projects typically run?
+- What kinds of practices, behaviours and values are reflected by the people in the organization?
+
+### Navigating culture
+- Ask questions
+- Make observations
+- Understand your impact
+
