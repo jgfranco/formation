@@ -1,8 +1,12 @@
 
 '''
-You given a total number of dice, the number of faces on each dice and a total, write a function that determines the total number of ways to throw the dice to get the target sum.
+You given a total number of dice, the number of faces on each 
+dice and a total, write a function that determines the total 
+number of ways to throw the dice to get the target sum.
 
-If the number of faces on a dice is X, then numbers on each face will be 1, 2, ..., X. So a dice with 5 faces will have numbers 1, 2, 3, 4 and 5.
+If the number of faces on a dice is X, then numbers on each 
+face will be 1, 2, ..., X. So a dice with 5 faces will have 
+numbers 1, 2, 3, 4 and 5.
  
 
 EXAMPLE(S)
@@ -18,7 +22,6 @@ FUNCTION SIGNATURE
 
 what will be the recursive equation??
 
-ym=
 
 
 edge cases:
