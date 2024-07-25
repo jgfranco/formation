@@ -93,4 +93,18 @@ def maxProductOfThreeNTime(array):
 print(maxProductOfThreeNTime([-9, -10, 10, 5, 2, 7]))
 print(maxProductOfThreeNTime([1,2,3,4,5]))
 print(maxProductOfThreeNTime([-10,1,2,3,4,5]))
-    
+
+def maxProductOfThreeHeap(array):
+    import heapq
+
+    largest = heapq.nlargest(3, array)
+    smallest = heapq.nsmallest(2, array)
+  
+    max1 = smallest[0] * smallest[1] * largest[0]
+    max2 = largest[0] * largest[1] * largest[2]
+
+    return max(max1, max2)
+
+print(maxProductOfThreeHeap([-9, -10, 10, 5, 2, 7]))
+print(maxProductOfThreeHeap([1,2,3,4,5]))
+print(maxProductOfThreeHeap([-10,1,2,3,4,5]))
