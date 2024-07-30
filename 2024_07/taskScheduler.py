@@ -48,3 +48,18 @@ There are only two types of tasks, A and B, which need to be separated
 by 3 intervals. This leads to idling twice between repetitions of these tasks.
 """
 
+def leastInterval(tasks, n):
+  from collections import Counter
+  
+  task_counts = Counter(tasks).values()
+
+  M = max(task_counts)
+
+  M_count = list(task_counts).count(M)
+  print(M_count)
+
+  return max(len(tasks), (M - 1) * (n + 1) + M_count)
+
+print(leastInterval(["A","A","A", "B","B","B"], 3)) # 10
+#print(leastInterval(["A","C","A","B","D","B"], 1)) # 6
+#print(leastInterval(["A","A","A","B","B","B"], 2)) # 8
