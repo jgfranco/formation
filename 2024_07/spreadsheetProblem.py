@@ -53,31 +53,25 @@ function ordinalToColumn(ord)
 # 175 = 100*1 + 10*7 + 1*5
 #     = 10^2 * 1 + 10^1 * 7 + 10^0*5
 
-def columnToOrdinal(headerStr):
-
-    multiplier = len(headerStr) - 1
+def columnToOrdinal(column):
     result = 0
-    for char in headerStr:
-        ordValue = ord(char) - 64
-        result += (26 ** multiplier) * ordValue
-        multiplier -= 1
+    for char in column:
+        charValue = ord(char) - ord("A") +1
+        result *=  26
+        result +=  charValue
     
     return result
 
 # print(columnToOrdinal("AZ"))
 
 def ordinalToColumn(ordinal):
-
-    
-    column = ""
-
+    result = ""
     while ordinal > 0:
-        ordinal -= 1
-        char  = chr((ordinal % 26) +65)
-        column  = char + column
-        ordinal = ordinal // 26
-
-    return column
+        ordinal -=1
+        char = chr((ordinal %26) + ord("A")) 
+        result = char + result
+        ordinal //= 26
+    return result
 
 
 # print(ordinalToColumn(26))
