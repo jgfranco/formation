@@ -112,6 +112,7 @@ print(columnToOrdinal("J") ,10)
 print(columnToOrdinal("Z") , 26)
 print(columnToOrdinal('AA') , 27)
 print(columnToOrdinal('AB') ,28)
+print(columnToOrdinal('AAA') ,703)
 
 print(ordinalToColumn(1),"A")
 print(ordinalToColumn(26) , "Z")
