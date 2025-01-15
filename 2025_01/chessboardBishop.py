@@ -12,7 +12,7 @@ def pairsOfAttackingBishops(bishops):
         plus = x + y
 
         left[minus] = left.get(minus, -1) + 1
-        right[plus] = right.get(plus, -1) +1
+        right[plus] = right.get(plus, -1) + 1
 
         count += left[minus] + right[plus]
 
