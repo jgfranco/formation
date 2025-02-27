@@ -69,3 +69,8 @@ class Solution:
             self.nums[i], self.nums[j] = self.nums[j], self.nums[i]
 
         return self.nums
+
+
+test = Solution([1,2,3])
+print(test.nums)
+print(test.shuffle())
