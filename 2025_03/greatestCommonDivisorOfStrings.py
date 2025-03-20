@@ -23,14 +23,6 @@ Output: ""
 """
 
 class Solution:
-    """public int gcd(int x, int y) {
-        if (y == 0) {
-            return x;
-        } else {
-            return gcd(y, x % y);
-        }    
-    }"
-    """
     def gcd(self, x: int, y: int) -> int:
         if y == 0:
             return x
@@ -47,4 +39,4 @@ class Solution:
 
 print(Solution().gcdOfStrings("ABCABC", "ABC")) # "ABC"
 print(Solution().gcdOfStrings("ABABAB", "ABAB")) # "AB"
-print(Solution().gcdOfStrings("LEET", "CODE")) # ""
+print(Solution().gcdOfStrings("LEET", "CODE")) # None
