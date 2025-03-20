@@ -40,3 +40,4 @@ class Solution:
 print(Solution().gcdOfStrings("ABCABC", "ABC")) # "ABC"
 print(Solution().gcdOfStrings("ABABAB", "ABAB")) # "AB"
 print(Solution().gcdOfStrings("LEET", "CODE")) # None
+print(Solution().gcdOfStrings("ABABAB", "AB")) # AB
