@@ -3,7 +3,7 @@ https://leetcode.com/problems/find-pivot-index/description/?envType=study-plan-v
 """
 
 class Solution:
-    def pivotIndex(self, nums: List[int]) -> int:
+    def pivotIndex(self, nums: list[int]) -> int:
 
         p = 0
 
