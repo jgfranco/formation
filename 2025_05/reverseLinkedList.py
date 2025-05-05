@@ -1,6 +1,6 @@
 """
 https://leetcode.com/problems/reverse-linked-list/description/?envType=study-plan-v2&envId=leetcode-75
-"""
+g"""
 
 # Definition for singly-linked list.
 class ListNode:
@@ -11,26 +11,10 @@ class ListNode:
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         
-        """
-          p c n
-        1 2 3>4>5
-         <
-        """
-        if not head or not head.next:
-            return head
-
-        prev = ListNode(-1)
-        prev.next = head
         curr = head
-        next = head.next
+        prev = None
 
         while curr:
-            curr.next = prev
-            if prev == head:
-                prev.next = None
-            prev = curr
-            curr = next
-            if next:
-                next = next.next
-            
+            curr.next, prev, curr = prev, curr, curr.next
+
         return prev
