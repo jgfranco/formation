@@ -10,32 +10,42 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    
     def pathSum(self, root: TreeNode, targetSum: int) -> int:
-        from collections import defaultdict
         
-        def dfs(node, curr_sum):
-            
-            nonlocal num_paths
-            if node is None:
-                return 
-
-            curr_sum += node.val
-            if curr_sum == targetSum:
-                num_paths += 1
-
-            num_paths += h[curr_sum-targetSum]
-            h[curr_sum] += 1
-            dfs(node.left, curr_sum)
-            dfs(node.right, curr_sum)
-            h[curr_sum] -= 1
-
+        """
+        pseudocode
         
-        num_paths = 0
-        h = defaultdict(int)
-        dfs(root, 0)
+        Recursive function that takes into consideration a path up until the current node
+        and also start a new path from the current node
+        rec call -> sumSoFar path
+        rec call -> new Path from current node
+        """
 
-        return num_paths
+        self.targetSumPaths = 0
+        from collections import deque
+
+        def count(node, currentSum = 0):
+
+            if not node: return 0
+
+            currentSum += node.val
+
+            if currentSum == targetSum:
+                self.targetSumPaths += 1
+
+            count(node.left, currentSum)
+            count(node.right, currentSum)
+
+        q = deque([root])
+
+        while q:
+            node = q.popleft()
+            count(node)
+            if node:
+                q.append(node.left)
+                q.append(node.right)
+
+        return self.targetSumPaths
 
 
         
