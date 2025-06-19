@@ -1,11 +1,16 @@
 '''
-When traveling around a city on public transit, changing busses or trains can be time consuming. We're building an app to help people plan routes and minimize transfers.
+When traveling around a city on public transit, changing busses or trains can be time consuming. 
+We're building an app to help people plan routes and minimize transfers.
 
-We'll be given routes as an array and each route is a list of stops along the route. We can assume that busses move back and forth along the routes so no matter the order of stops along any route, we can reach all stops along that route with one ride.
+We'll be given routes as an array and each route is a list of stops along the route. We can assume 
+that busses move back and forth along the routes so no matter the order of stops along any route, 
+we can reach all stops along that route with one ride.
 
 The stops themselves are represented as positive integers.
 
-Given the list of routes and a desired starting stop and destination stop, what is the minimum number of bus rides required to reach the destination? If the destination stop is not reachable, return -1.
+Given the list of routes and a desired starting stop and destination stop, what is the minimum 
+number of bus rides required to reach the destination? If the destination stop is not reachable, 
+return -1.
  
 
 EXAMPLE(S)
@@ -56,6 +61,7 @@ def numBusesToDestination(routes, source, target):
     adjList = buildAdjecencyList(routes)
     if len(adjList) ==0: return -1
 
+    print(adjList)
     from collections import deque
     q = deque([(source, 0)])
 
