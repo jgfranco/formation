@@ -65,37 +65,52 @@ blocks = [
 ]
 
 def countPatterns(numberOfKeys: int) -> int:
-    solutions = 0
-    solArray = []
+    if numberOfKeys == 0: return 0
+    solutions = []
     path = []
     visited = set()
 
-    def helper(start):
-        nonlocal solutions
-
-        if len(path) == numberOfKeys:
-            solutions +=1
-            solArray.append(path.copy())
-            return solutions
+    def helper():
+      if len(path) == numberOfKeys:
+        solutions.append(path.copy())
+        return
       
-        for i, option in enumerate(blocks[start]):
-            if i == 0: continue
-            if option == 0 or option in visited:
-                path.append(option)
-                visited.add(option)
-                helper(option)
-                path.pop(-1)
-                visited.discard(option)
-        
-        return solutions
+      for i in range(1,10):
+        if len(path) == 0 or can_visit(i, path):
+            path.append(i)
+            visited.add(i)
+            helper()
+            path.pop(-1)
+            visited.discard(i)
+
+
+    def can_visit(i, path):
+        if i in path: return False
+        last = path[-1]
+        nxt = blocks[last][i]
+        if nxt == 0 or nxt in path:
+            return True
             
+    
+        return False
 
+   
+    helper()
+    #print(solutions)
+    return len(solutions)
 
-    corner = helper(1)
-    center = helper(2)
-    middle = helper(5)
-    total = (4 * corner) + (4 * center) + middle
-    print(solArray)
-    return total
+def test_count_patterns():
+    assert countPatterns(0) == 0   # no patterns of length 0
+    assert countPatterns(1) == 9     # each key alone
+    assert countPatterns(2) == 56
+    assert countPatterns(3) == 320
+    assert countPatterns(4) == 1624
+    assert countPatterns(5) == 7152
+    assert countPatterns(6) == 26016
+    assert countPatterns(7) == 72912
+    assert countPatterns(8) == 140704
+    assert countPatterns(9) == 140704  # same as 8, because all keys used
 
-print(countPatterns(1))
+    print("All test cases passed.")
+
+test_count_patterns()
