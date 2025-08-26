@@ -61,7 +61,6 @@ def simplify_pathAbs(path):
     elements = path.split("/")
     stack = []
 
-   
     for element in elements:
         if element == '.' or element == '':
             continue
