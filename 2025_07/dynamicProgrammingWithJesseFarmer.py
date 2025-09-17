@@ -174,7 +174,7 @@ print(longest_common_subsequence(
         ['B', 'D', 'C', 'A', 'E', 'A']
     ))
 
-def knapsack_01(n: int, capacity: int, weights: List[int], values: List[int]) -> int:
+def knapsack_01(n: int, capacity: int, weights: list[int], values: list[int]) -> int:
     """
     Given a bag with a capacity and a list of items with weights and values,
     return the maximum value that can be carried by the bag. There is only
