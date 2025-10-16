@@ -61,6 +61,24 @@ def number_ways(n, faces, total):
     return helper(n, total)
 
 
+def number_waysBottomUp(n, faces, target):
+    ways = [[0 for _ in range(target + 1)] for_  in range(n)]
+
+    # Initialize the first row. With one die, there
+    # is one way to make each number from 1 to
+    # the number of faces and no ways after that
+    # up to the target.
+    for t in range(1, target + 1):
+        ways[0][t] = 1 if t <= faces else 0
+
+    for dice in range(1, n):
+        for t in range(1, target + 1):
+            for face in range(1, min(t, faces + 1)):
+                ways[dice][t] += ways[dice - 1][t - face]
+
+    return ways[-1][-1]
+
+
 print(number_ways(2, 5, 8), "expect 3")
 print(number_ways(1, 6, 3), "expect 1")
 print(number_ways(3, 6, 7), "expect 15")
