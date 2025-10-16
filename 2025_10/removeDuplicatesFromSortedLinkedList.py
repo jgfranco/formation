@@ -5,11 +5,9 @@ class ListNode:
     
     def __str__(self):
         nodes = []
-
         while self:
             nodes.append(str(self.val))
             self = self.next
-        
         return "->".join(nodes)
 
 
