@@ -62,7 +62,7 @@ def number_ways(n, faces, total):
 
 
 def number_waysBottomUp(n, faces, target):
-    ways = [[0 for _ in range(target + 1)] for_  in range(n)]
+    ways = [[0 for _ in range(target + 1)] for _  in range(n)]
 
     # Initialize the first row. With one die, there
     # is one way to make each number from 1 to
